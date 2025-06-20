@@ -1,100 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Urban Feast - Menu</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #fefefe;
-      color: #333;
-    }
-    header {
-      background-color: #2c3e50;
-      padding: 20px;
-      text-align: center;
-      color: white;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    .menu-section {
-      padding: 30px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .section-title {
-      font-size: 1.8em;
-      border-bottom: 2px solid #ccc;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      margin: 10px 0;
-    }
-    .item-name {
-      font-weight: 600;
-    }
-    .item-price {
-      color: #888;
-    }
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Feast</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fafafa;
+        color: #333;
+      }
+      header {
+        background: #111;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      .container {
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+      }
+      .menu-section {
+        margin-bottom: 40px;
+      }
+      .menu-section h2 {
+        border-bottom: 2px solid #333;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+        color: #444;
+      }
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px dashed #ccc;
+      }
+      .menu-item:last-child {
+        border-bottom: none;
+      }
+      .item-name {
+        flex: 1;
+      }
+      .item-price {
+        min-width: 60px;
+        text-align: right;
+      }
+      @media (max-width: 600px) {
+        .menu-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .item-price {
+          text-align: left;
+          padding-top: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Urban Feast</h1>
+    </header>
+    <div class="container">
+      <div class="menu-section">
+        <h2>Roti</h2>
+        <div class="menu-item">
+          <div class="item-name">Tandoori Roti</div>
+          <div class="item-price">₹15</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Tawa Roti</div>
+          <div class="item-price">₹15</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Butter Roti</div>
+          <div class="item-price">₹20</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Missi Roti</div>
+          <div class="item-price">₹30</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Butter Naan</div>
+          <div class="item-price">₹35</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Plan Naan</div>
+          <div class="item-price">₹30</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Laccha Prantha</div>
+          <div class="item-price">₹35</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Keema Naan</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Aloo Naan</div>
+          <div class="item-price">₹50</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Naan</div>
+          <div class="item-price">₹80</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Garlic Naan</div>
+          <div class="item-price">₹40</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Amritsari Kuclcha</div>
+          <div class="item-price">₹150</div>
+        </div>
+      </div>
 
-  <header>
-    <h1>Urban Feast</h1>
-    <p>Your Ultimate Dining Experience</p>
-  </header>
+      <div class="menu-section">
+        <h2>Soup</h2>
+        <div class="menu-item">
+          <div class="item-name">Hot and Sour</div>
+          <div class="item-price">₹80</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Veg Soup</div>
+          <div class="item-price">₹70</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Corn Soup</div>
+          <div class="item-price">₹90</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Munchow Soup</div>
+          <div class="item-price">₹100</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chicken Soup</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Muttan Soup</div>
+          <div class="item-price">₹180</div>
+        </div>
+      </div>
 
-  <div class="menu-section">
-    <div class="section-title">Starters</div>
-    <div class="menu-item">
-      <div class="item-name">Crispy Veg Spring Rolls</div>
-      <div class="item-price">₹120</div>
-    </div>
-    <div class="menu-item">
-      <div class="item-name">Chicken Tikka</div>
-      <div class="item-price">₹220</div>
-    </div>
+      <div class="menu-section">
+        <h2>Sweets</h2>
+        <div class="menu-item">
+          <div class="item-name">Gulab Jamun (2 Pcs.)</div>
+          <div class="item-price">₹50</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Ras Malai</div>
+          <div class="item-price">₹80</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Fruit Cream</div>
+          <div class="item-price">₹100</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Ice cream (Per spoon)</div>
+          <div class="item-price">₹40</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Brownie</div>
+          <div class="item-price">₹80</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Brownie with Ice-cream</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Brownie with hotchocolate</div>
+          <div class="item-price">₹150</div>
+        </div>
+      </div>
 
-    <div class="section-title">Main Course</div>
-    <div class="menu-item">
-      <div class="item-name">Paneer Butter Masala</div>
-      <div class="item-price">₹190</div>
-    </div>
-    <div class="menu-item">
-      <div class="item-name">Butter Chicken</div>
-      <div class="item-price">₹260</div>
-    </div>
+      <div class="menu-section">
+        <h2>Drinks And Shakes</h2>
+        <div class="menu-item">
+          <div class="item-name">Lemon Soda</div>
+          <div class="item-price">₹45</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Lemon Juice</div>
+          <div class="item-price">₹35</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Mix Fruit Juice</div>
+          <div class="item-price">₹30</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Orange Juice</div>
+          <div class="item-price">₹30</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Mango Shake</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Banana Shake</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Oreo Shake</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Papaya Shake</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Segional Fruit Juice</div>
+          <div class="item-price">₹50</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Kitkat Shake</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chocolate Shake</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Tea</div>
+          <div class="item-price">₹20</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Lemon Tea</div>
+          <div class="item-price">₹25</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Hot Coffee</div>
+          <div class="item-price">₹70</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Cold Coffe</div>
+          <div class="item-price">₹80</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Black Coffee</div>
+          <div class="item-price">₹90</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Virgin Mojito</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Milk</div>
+          <div class="item-price">₹30</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Bornvita Milk</div>
+          <div class="item-price">₹40</div>
+        </div>
+      </div>
 
-    <div class="section-title">Desserts</div>
-    <div class="menu-item">
-      <div class="item-name">Gulab Jamun</div>
-      <div class="item-price">₹80</div>
-    </div>
-    <div class="menu-item">
-      <div class="item-name">Chocolate Brownie</div>
-      <div class="item-price">₹150</div>
-    </div>
-  </div>
+      <div class="menu-section">
+        <h2>Main Course</h2>
+        <div class="menu-item">
+          <div class="item-name">Paneer Butter Msala</div>
+          <div class="item-price">₹250</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Do Pyaza</div>
+          <div class="item-price">₹190</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Lababdar</div>
+          <div class="item-price">₹190</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Sahi Paneer</div>
+          <div class="item-price">₹195</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Matar Paneer</div>
+          <div class="item-price">₹180</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Bhurzi</div>
+          <div class="item-price">₹220</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Kadai Paneer</div>
+          <div class="item-price">₹180</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Matar Mashrom</div>
+          <div class="item-price">₹180</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Mashrom Do Payaza</div>
+          <div class="item-price">₹190</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Mashrom Butter Masala</div>
+          <div class="item-price">₹200</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Malai Kofta</div>
+          <div class="item-price">₹180</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Palak Paneer</div>
+          <div class="item-price">₹180</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Palak Corn</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Kashmiri Dum Aloo</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Zira Aloo</div>
+          <div class="item-price">₹130</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Dal Makhni</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Dal Fry</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Yellow Dal</div>
+          <div class="item-price">₹130</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chana Masala</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Mix Veg</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Aloo Matar</div>
+          <div class="item-price">₹130</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Aloo Tamatar</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Korma</div>
+          <div class="item-price">₹250</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Egg Bjurji</div>
+          <div class="item-price">₹100</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Egg Kari</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chicken Kari</div>
+          <div class="item-price">₹250</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Kadai Chicken</div>
+          <div class="item-price">₹250</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Rost Chicken</div>
+          <div class="item-price">₹250</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Butter Chicken</div>
+          <div class="item-price">₹270</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Fish Kari</div>
+          <div class="item-price">₹300</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Rada Mutton</div>
+          <div class="item-price">₹350</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Rada Chicken</div>
+          <div class="item-price">₹250</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Sauji Chicken</div>
+          <div class="item-price">₹270</div>
+        </div>
+      </div>
 
-  <footer>
-    © 2025 Urban Feast | All Rights Reserved
-  </footer>
-
-</body>
+      <div class="menu-section">
+        <h2>Only Trout Fish</h2>
+        <div class="menu-item">
+          <div class="item-name">Tandoori Momo</div>
+          <div class="item-price">₹160</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Fried Momo</div>
+          <div class="item-price">₹145</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chilli Momo</div>
+          <div class="item-price">₹180</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Egg Roll</div>
+          <div class="item-price">₹100</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Veg Roll</div>
+          <div class="item-price">₹80</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Roll</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chicken Roll</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Kabab Roll</div>
+          <div class="item-price">₹160</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Tikka Roll</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chana Chat</div>
+          <div class="item-price">₹100</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Manchurian</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Noodle</div>
+          <div class="item-price">₹100</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chilli Garlik Noodle</div>
+          <div class="item-price">₹120</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Paneer Noodle</div>
+          <div class="item-price">₹135</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chicken Noodle</div>
+          <div class="item-price">₹150</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Egg Noodle</div>
+          <div class="item-price">₹130</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Tandoori Fish</div>
+          <div class="item-price">₹450</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Chicken Tikka</div>
+          <div class="item-price">₹330</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Fish Tikka</div>
+          <div class="item-price">₹350</div>
+        </div>
+        <div class="menu-item">
+          <div class="item-name">Prawns</div>
+          <div class="item-price">₹450</div>
+        </div>
+      </div>
+    </div>
+    <!-- End of container -->
+  </body>
 </html>
-
